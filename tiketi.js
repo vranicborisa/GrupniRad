@@ -50,11 +50,12 @@ function otvoriModal(tiket_id) {
         var utakmica = (findById(value.utakmica_id));
         if (utakmica[0].rezultat == null) {
             utakmice_u_igri++;
+            
         } else {
             if (utakmica[0].rezultat == value.igra) {
                 pogodak++;
             } else {
-                promasaj++;
+                promasaj++; 
             }
         }
         if (value.igra == 3) {
@@ -90,9 +91,9 @@ function otvoriModal(tiket_id) {
         $("#status_tiketa").removeClass("crvenaBoja");
         $("#status_tiketa").addClass("plavaBoja");
         
-        $("#tabela_modal tbody tr").removeClass("zelenaBoja");
-        $("#tabela_modal tbody tr").removeClass("crvenaBoja");
-        $("#tabela_modal tbody tr").addClass("plavaBoja");
+        // $("#tabela_modal tbody tr").removeClass("zelenaBoja");
+        // $("#tabela_modal tbody tr").removeClass("crvenaBoja");
+        // $("#tabela_modal tbody tr").addClass("plavaBoja");
 
     } else if (promasaj > 0) {
         $("#status_tiketa").html("Gubitan");
@@ -100,18 +101,18 @@ function otvoriModal(tiket_id) {
         $("#status_tiketa").removeClass("plavaBoja");
         $("#status_tiketa").addClass("crvenaBoja");
 
-        $("#tabela_modal tbody tr").removeClass("zelenaBoja");
-        $("#tabela_modal tbody tr").removeClass("plavaBoja");
-        $("#tabela_modal tbody tr").addClass("crvenaBoja");
+        // $("#tabela_modal tbody tr").removeClass("zelenaBoja");
+        // $("#tabela_modal tbody tr").removeClass("plavaBoja");
+        // $("#tabela_modal tbody tr").addClass("crvenaBoja");
     } else {
         $("#status_tiketa").html("Dobitan");
         $("#status_tiketa").removeClass("crvenaBoja");
         $("#status_tiketa").removeClass("plavaBoja");
         $("#status_tiketa").addClass("zelenaBoja");
 
-        $("#tabela_modal tbody tr").removeClass("crvenaBoja");
-        $("#tabela_modal tbody tr").removeClass("plavaBoja");
-        $("#tabela_modal tbody tr").addClass("zelenaBoja");
+        // $("#tabela_modal tbody tr").removeClass("crvenaBoja");
+        // $("#tabela_modal tbody tr").removeClass("plavaBoja");
+        // $("#tabela_modal tbody tr").addClass("zelenaBoja");
         
         // console.log(utakmice_u_igri);
         // console.log(pogodak);
@@ -119,6 +120,7 @@ function otvoriModal(tiket_id) {
 
 
     }
+    
 }
 
 
