@@ -85,11 +85,11 @@ function otvoriModal(tiket_id) {
         $("#tabela_modal tbody").append('<tr><td>' + timovi[utakmica[0].tim1] + '</td><td>' + timovi[utakmica[0].tim2] + '</td><td>' + tip_za_tabelu + '</td><td>' + kvota + '</td></tr>');
     });
     if (utakmice_u_igri > 0) {
-        $("#status_tiketa").html("AKtivan");
+        $("#status_tiketa").html("AKtivan <style>.boja {color:blue}</style>");
     } else if (promasaj > 0) {
-        $("#status_tiketa").html("Gubitan");
+        $("#status_tiketa").html("Gubitan <style>.boja {color:red}</style>");
     } else {
-        $("#status_tiketa").html("Dobitan");
+        $("#status_tiketa").html("Dobitan <style>.boja {color:green}</style>");
         // console.log(utakmice_u_igri);
         // console.log(pogodak);
         // console.log(promasaj);

@@ -41,7 +41,7 @@
                     <h3 class="modal-title">Detalji tiketa</h3>
                 </div>
                 <div class="modal-body">
-                    <h2><span id="status_tiketa"></span></h2>
+                    <h2><span id="status_tiketa" class="boja"></span></h2>
                     <p>Uplata: <span id="uplata"></span></p>
                     <p>Ukupna kvota: <span id="ukupna_kvota"></span></p>
                     <p>Potencijalna isplata: <span id="potencijalna_isplata"></span></p>
