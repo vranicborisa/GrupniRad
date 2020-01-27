@@ -82,23 +82,37 @@ function otvoriModal(tiket_id) {
         console.log(utakmica.tim1);
         (Math.round((ukupna_kvota * tiket[0].uplata) * 100) / 100)
         $("#potencijalna_isplata").html(Math.round((ukupna_kvota * tiket[0].uplata) * 100) / 100);
-        $("#tabela_modal tbody").append('<tr><td>' + timovi[utakmica[0].tim1] + '</td><td>' + timovi[utakmica[0].tim2] + '</td><td>' + tip_za_tabelu + '</td><td>' + kvota + '</td></tr>');
+        $("#tabela_modal tbody").append('<tr id="red_u_modalu"><td>' + timovi[utakmica[0].tim1] + '</td><td>' + timovi[utakmica[0].tim2] + '</td><td>' + tip_za_tabelu + '</td><td>' + kvota + '</td></tr>');
     });
     if (utakmice_u_igri > 0) {
-        $("#status_tiketa").html("AKtivan");
-        $("#status_tiketa").removeClass("AKtivan1");
-        $("#status_tiketa").removeClasss("AKtivan2");
-        $("#status_tiketa").addClass("AKtivan");
+        $("#status_tiketa").html("Aktivan");
+        $("#status_tiketa").removeClass("zelenaBoja");
+        $("#status_tiketa").removeClass("crvenaBoja");
+        $("#status_tiketa").addClass("plavaBoja");
+        
+        $("#tabela_modal tbody tr").removeClass("zelenaBoja");
+        $("#tabela_modal tbody tr").removeClass("crvenaBoja");
+        $("#tabela_modal tbody tr").addClass("plavaBoja");
+
     } else if (promasaj > 0) {
         $("#status_tiketa").html("Gubitan");
-        $("#status_tiketa").removeClass("AKtivan12");
-        $("#status_tiketa").removeClasss("AKtivan22");
-        $("#status_tiketa").addClass("AKtivan23");
+        $("#status_tiketa").removeClass("zelenaBoja");
+        $("#status_tiketa").removeClass("plavaBoja");
+        $("#status_tiketa").addClass("crvenaBoja");
+
+        $("#tabela_modal tbody tr").removeClass("zelenaBoja");
+        $("#tabela_modal tbody tr").removeClass("plavaBoja");
+        $("#tabela_modal tbody tr").addClass("crvenaBoja");
     } else {
-        $("#status_tiketa").html("AKtivan");
-        $("#status_tiketa").removeClass("AKtivan13");
-        $("#status_tiketa").removeClasss("AKtivan23");
-        $("#status_tiketa").addClass("AKtivan33");
+        $("#status_tiketa").html("Dobitan");
+        $("#status_tiketa").removeClass("crvenaBoja");
+        $("#status_tiketa").removeClass("plavaBoja");
+        $("#status_tiketa").addClass("zelenaBoja");
+
+        $("#tabela_modal tbody tr").removeClass("crvenaBoja");
+        $("#tabela_modal tbody tr").removeClass("plavaBoja");
+        $("#tabela_modal tbody tr").addClass("zelenaBoja");
+        
         // console.log(utakmice_u_igri);
         // console.log(pogodak);
         // console.log(promasaj);
