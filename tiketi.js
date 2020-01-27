@@ -32,7 +32,7 @@ function ucitajTikete() {
 
         });
         $("#ukupno_tiketa").html(json.length);
-        console.log(json);
+        console.log(json);  
     });
 }
 
