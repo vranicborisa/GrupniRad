@@ -57,3 +57,15 @@
 #tiket th {
 	text-align: center;
 }
+
+.plavaBoja{
+	color:blue;
+}
+
+.zelenaBoja {
+	color: green;
+}
+
+.crvenaBoja {
+	color: red;
+}
