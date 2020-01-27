@@ -86,10 +86,19 @@ function otvoriModal(tiket_id) {
     });
     if (utakmice_u_igri > 0) {
         $("#status_tiketa").html("AKtivan");
+        $("#status_tiketa").removeClass("AKtivan1");
+        $("#status_tiketa").removeClasss("AKtivan2");
+        $("#status_tiketa").addClass("AKtivan");
     } else if (promasaj > 0) {
         $("#status_tiketa").html("Gubitan");
+        $("#status_tiketa").removeClass("AKtivan12");
+        $("#status_tiketa").removeClasss("AKtivan22");
+        $("#status_tiketa").addClass("AKtivan23");
     } else {
-        $("#status_tiketa").html("Dobitan");
+        $("#status_tiketa").html("AKtivan");
+        $("#status_tiketa").removeClass("AKtivan13");
+        $("#status_tiketa").removeClasss("AKtivan23");
+        $("#status_tiketa").addClass("AKtivan33");
         // console.log(utakmice_u_igri);
         // console.log(pogodak);
         // console.log(promasaj);
